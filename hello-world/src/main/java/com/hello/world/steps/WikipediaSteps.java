@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import com.hello.world.pageobjects.wikipedia.DefinitionPage;
 import com.hello.world.pageobjects.wikipedia.HomePage;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -29,8 +30,8 @@ public class WikipediaSteps {
         homePage.getSearchComponent().searchForQuery(query);
     }
 
-    @Then("^following page header is displayed:$")
-    public void followingPageHeaderIsDisplayed(String headerText) {
+    @Then("^definition page with header \"(.*)\" is displayed$")
+    public void definitionPageWithHeaderHelloWorldIsDisplayed(String headerText) throws Throwable {
         assertThat("Definition page for " + headerText + " is not displayed",
                 definitionPage.getHeading(), is(headerText));
     }

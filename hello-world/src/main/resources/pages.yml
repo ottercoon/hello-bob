@@ -1,0 +1,7 @@
+Text - Update&Read:
+  path: /content/geometrixx/en/toolbar/search.html
+  parsys: /par
+
+Homepage - RightParsys:
+  path: /content/geometrixx/en.html
+  parsys: /rightpar
